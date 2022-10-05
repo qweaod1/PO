@@ -1,0 +1,15 @@
+lista = [2,3]
+
+def iloczyn(lista):
+    iloczyn=1
+    for x in lista:
+        iloczyn = iloczyn*x
+
+    print(iloczyn)
+
+def main():
+    iloczyn(lista)
+
+main()
+
+
