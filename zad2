@@ -1,0 +1,55 @@
+lista = []
+x=1
+
+while x < 11:
+    lista.append(x)
+    x=x+1
+
+print(lista)
+
+lista1 =[]
+x=0
+
+while x < 21:
+    if x%2==0:
+        lista1.append(x)
+    x+=1
+
+print(lista1)
+
+lista3 = []
+x=1
+
+while x < 11:
+    lista3.append(x*x)
+    x += 1
+
+print(lista3)
+
+lista4 = []
+x=1
+
+while x < 11:
+    lista4.append(0)
+    x += 1
+
+print(lista4)
+
+lista5 = []
+x=2
+
+while x < 12:
+    lista5.append(x%2)
+    x += 1
+
+print(lista5)
+
+lista6 = []
+x=0
+
+while x < 10:
+    lista6.append(x%5)
+    x += 1
+
+print(lista6)
+
