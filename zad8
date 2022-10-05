@@ -1,0 +1,12 @@
+lista=[]
+for i in range(2,10001):
+    lista.append(i)
+
+for i in lista:
+    for x in range(2,101):
+           
+ lista.remove(x)
+
+
+
+print(lista)
