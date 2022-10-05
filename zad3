@@ -1,0 +1,15 @@
+lista=[-1,2,-3,-6,2,-5]
+
+def ile_ujemnych(lista):
+    leng = 0
+    for x in lista:
+        if x < 0:
+            leng += 1
+
+    print(leng)
+
+def main():
+    ile_ujemnych(lista)
+
+main()
+
