@@ -1,0 +1,9 @@
+lista = []
+
+while len(lista)<10:
+        x = int(input())
+        if x not in lista:
+            lista.append(x)
+
+print(lista)
+
