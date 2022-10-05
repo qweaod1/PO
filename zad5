@@ -1,0 +1,18 @@
+lista = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+def minmax(lista):
+    max=0
+    min=10000000000000
+    for x in lista:
+        if x<min:
+            min = x
+        if x>max:
+            max = x
+    minmax1=(min,max)
+    return minmax1
+
+def main():
+    print(minmax(lista))
+
+
+main()
