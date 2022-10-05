@@ -1,0 +1,18 @@
+lista = [1,4,16,9,9,7,4,9,11]
+def suma(lista):
+    i=0
+    wynik = 0
+    for i in range(0,9):
+        if i%2==0:
+            wynik+=lista[i]
+
+        if i%2==1:
+            wynik-=lista[i]
+        i+=1
+
+    return wynik
+
+def main():
+    print(suma(lista))
+
+main()
