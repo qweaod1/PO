@@ -1,0 +1,72 @@
+def mult(arg, /):
+    wynik = 1
+    for i in arg:
+        wynik *= i
+    return wynik
+
+def mult_inst(arg, /):
+    wynik = 1
+    for i in arg:
+        if isinstance(i,int):
+            wynik *= i
+    return wynik
+
+def multiply(arg, /):
+    wynik = 1
+    for i in arg:
+        if isinstance(i,int):
+            wynik *= i
+    return wynik
+
+
+def multiply(a,b,c):
+    wynik = a*b*c
+    return wynik
+
+def multiply_inst(arg):
+    wynik = 1
+    for i in arg:
+        if isinstance(i,int):
+            wynik *= i
+    return wynik
+
+
+def make_car(firma, model):
+    wynik = 1
+    for i in arg:
+        if isinstance(i,int):
+            wynik *= i
+    return wynik
+
+def main():
+
+    print(mult([3, 5, 7]))
+    print(mult(range(3, 8, 2)))
+    print(mult_inst([3, 5, 7, 8.5,'pies']))
+    print(mult_inst(range(3, 8, 2)))
+    print(multiply(3, 5, 7))
+    print(multiply_inst([3, 5, 7]))
+
+
+tab = [[], [], []]
+for x in range(1,11):
+    tab[0].append(x)
+    tab[1].append(pow(x,2))
+    tab[2].append(pow(x,3))
+print(tab)
+
+tab1 = [[], [], [], [], [], [], [], [], [], []]
+for x in range(0,10):
+    for y in range(0,x+1):
+        tab1[x].append(y + 1)
+
+suma = 0
+for x in range(0,10):
+    suma = 0
+    for y in range(0,x+1):
+        suma += tab1[x][y]
+    print('Suma wiersz'+str(x+1)+'='+str(suma))
+
+print(suma)
+
+main ()
