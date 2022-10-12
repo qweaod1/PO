@@ -33,12 +33,13 @@ def multiply_inst(arg):
 
 
 #zad5
-def make_car(firma, model):
-    wynik = 1
-    for i in arg:
-        if isinstance(i,int):
-            wynik *= i
-    return wynik
+def make_car(firma, model, **kwargs):
+    cars = {}
+    cars['firma'] = firma
+    cars['model'] = model
+    for key, value in kwargs.items():
+        cars[key] = value
+    return cars
 
 
 #zad1
@@ -61,7 +62,6 @@ def mult1(a,b):
     g = f*2
     return g
 
-
 #zad4
 def transp(a):
     m, n = a.shape
@@ -81,7 +81,6 @@ def main():
     print(multiply(3, 5, 7))
     print(multiply_inst([3, 5, 7]))
 
-
 #zad1
 tab = [[], [], []]
 for x in range(1,11):
@@ -94,7 +93,6 @@ tab1 = [[], [], [], [], [], [], [], [], [], []]
 for x in range(0,10):
     for y in range(0,x+1):
         tab1[x].append(y + 1)
-
 
 #zad2
 suma = 0
@@ -113,4 +111,8 @@ print(product(a,b))
 print(mult1(a,b))
 print(transp(a))
 
+print(make_car('Kia', 'Picanto', kolor='cafe mocca', poj_silnika=900))
+print(make_car('Opel', 'Astra', kolor='srebrny', poj_silnika = 1598))
+
 main ()
+
