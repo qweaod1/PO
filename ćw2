@@ -1,11 +1,14 @@
 import numpy as np
 
+#zad1
 def mult(arg, /):
     wynik = 1
     for i in arg:
         wynik *= i
     return wynik
 
+
+#zad2
 def mult_inst(arg, /):
     wynik = 1
     for i in arg:
@@ -13,18 +16,14 @@ def mult_inst(arg, /):
             wynik *= i
     return wynik
 
-def multiply(arg, /):
-    wynik = 1
-    for i in arg:
-        if isinstance(i,int):
-            wynik *= i
-    return wynik
 
-
+#zad3
 def multiply(a,b,c):
     wynik = a*b*c
     return wynik
 
+
+#zad4
 def multiply_inst(arg):
     wynik = 1
     for i in arg:
@@ -33,6 +32,7 @@ def multiply_inst(arg):
     return wynik
 
 
+#zad5
 def make_car(firma, model):
     wynik = 1
     for i in arg:
@@ -41,26 +41,35 @@ def make_car(firma, model):
     return wynik
 
 
+#zad1
 def sum(a, b):
     c = a+b
 
     return c
 
 
+#zad2
 def product(a,b):
     f = a*b
 
     return f
 
 
+#zad3
 def mult1(a,b):
     f = a*b
     g = f*2
     return g
 
-def transp(a):
 
-    return a.transpose()
+#zad4
+def transp(a):
+    m, n = a.shape
+    y = np.empty([n,m], dtype=int)
+    for i in range(0,m):
+        for m in range(0,n):
+            y[i,m] = a[m,i]
+    return y
 
 
 def main():
@@ -73,6 +82,7 @@ def main():
     print(multiply_inst([3, 5, 7]))
 
 
+#zad1
 tab = [[], [], []]
 for x in range(1,11):
     tab[0].append(x)
@@ -85,6 +95,8 @@ for x in range(0,10):
     for y in range(0,x+1):
         tab1[x].append(y + 1)
 
+
+#zad2
 suma = 0
 for x in range(0,10):
     suma = 0
@@ -96,14 +108,9 @@ print(suma)
 
 a = np.array([[0, 1, 4], [1, 1, 8], [3, 5, 7]])
 b = np.array([[1, 2, 7], [3, 4, 9], [11, 23, 4]])
-
 print(sum(a,b))
 print(product(a,b))
 print(mult1(a,b))
 print(transp(a))
 
 main ()
-
-
-
-
