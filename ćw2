@@ -1,3 +1,5 @@
+import numpy as np
+
 def mult(arg, /):
     wynik = 1
     for i in arg:
@@ -38,6 +40,29 @@ def make_car(firma, model):
             wynik *= i
     return wynik
 
+
+def sum(a, b):
+    c = a+b
+
+    return c
+
+
+def product(a,b):
+    f = a*b
+
+    return f
+
+
+def mult1(a,b):
+    f = a*b
+    g = f*2
+    return g
+
+def transp(a):
+
+    return a.transpose()
+
+
 def main():
 
     print(mult([3, 5, 7]))
@@ -69,4 +94,16 @@ for x in range(0,10):
 
 print(suma)
 
+a = np.array([[0, 1, 4], [1, 1, 8], [3, 5, 7]])
+b = np.array([[1, 2, 7], [3, 4, 9], [11, 23, 4]])
+
+print(sum(a,b))
+print(product(a,b))
+print(mult1(a,b))
+print(transp(a))
+
 main ()
+
+
+
+
