@@ -1,0 +1,17 @@
+import math
+class Punkt:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def distance(self, b):
+        return math.sqrt((b.x - self.x)**2 + (b.y - self.y)**2)
+
+
+def main():
+    point = Punkt(2, 5)
+    point1 = Punkt(3, 6)
+    print(point.distance(point1))
+
+if __name__ == "__main__":
+    main()
