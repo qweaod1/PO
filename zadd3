@@ -1,0 +1,28 @@
+class SodaCan:
+    def __init__(self, wysokosc, promien):
+        self.wysokosc = wysokosc
+        self.promien = promien
+
+    def get_surface_area(self):
+        h = self.wysokosc
+        r = self.promien
+        Pb = 2*3.14*r*h
+        Pp = 2*3.14*pow(r, 2)
+        Pc = Pb+Pp
+
+        return Pc
+
+    def get_volume(self):
+        h = self.wysokosc
+        r = self.promien
+        v = 3.14*h*pow(r, 2)
+
+        return v
+
+def main():
+    x = SodaCan(4, 6)
+    print(x.get_surface_area())
+    print(x.get_volume())
+
+if __name__ == "__main__":
+    main()
