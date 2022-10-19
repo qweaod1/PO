@@ -1,0 +1,30 @@
+class Car:
+    def __init__(self, wydajnosc, pojemnosc):
+        self.wydajnosc = wydajnosc
+        self.pojemnosc = pojemnosc
+        self.paliwo = 0
+
+    def drive(self, dystans):
+        return (self.wydajnosc/dystans)*100
+
+    def get_fuel_level(self):
+        return self.pojemnosc
+
+    def add_fuel(self, paliwo1):
+        if paliwo1>self.pojemnosc:
+            nadwyzka = self.pojemnosc - paliwo1
+            paliwo1 = self.pojemnosc - nadwyzka
+            self.paliwo += paliwo1
+
+            return self.paliwo
+
+
+def main():
+    my_car = Car(20, 40)
+    my_car.add_fuel(30)
+    my_car.drive(100)
+    print(my_car.get_fuel_level())
+    print(my_car.paliwo)
+
+if __name__ == "__main__":
+    main()
