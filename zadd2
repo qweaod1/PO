@@ -1,0 +1,29 @@
+import math
+class Adres:
+    def __init__(self, numer, ulica, nrmiesz='', miasto='', kod=''):
+        self.numer = numer
+        self.ulica = ulica
+        self.nrmiesz = nrmiesz
+        self.miasto = miasto
+        self.kod = kod
+
+    def show(self):
+        print(f'{self.numer}{self.ulica}')
+        print(f'{self.kod}{self.miasto}')
+
+    def comes_before(self, other):
+        kodp = self.kod
+        kodp = int(kodp)
+        if kodp < other:
+            return True
+        else:
+            return False
+
+def main():
+    x = Adres(8, 'Swietlista', miasto='Olsztyn', kod_pocztowy='10345')
+    x.show()
+    print("Czy kod pocztowy twojego miejsca zamieszkania byl przed kodem Torunia?")
+    print(x.comes_before(87100))
+
+if __name__ == "__main__":
+    main()
