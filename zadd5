@@ -1,0 +1,32 @@
+class Student:
+    def __init__(self, imie, nazwisko, wynik):
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.wynik = wynik
+        self.licznik = 0
+
+    def get_name(self):
+        print(f'{self.imie}{self.nazwisko}')
+
+    def add_quiz(self, score):
+        self.licznik += 1
+        self.wynik += score
+
+    def get_total_score(self):
+        return self.wynik
+
+    def get_average_score(self):
+        return self.wynik / self.licznik
+
+
+def main():
+    x = Student('Andrzej', 'Namyslowicz', 234)
+    print(x.get_name())
+    x.add_quiz(5)
+    x.add_quiz(6)
+    x.add_quiz(10)
+    print(x.get_total_score())
+    print(x.get_average_score())
+
+if __name__ == '__main__':
+    main()
