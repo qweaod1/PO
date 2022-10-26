@@ -1,0 +1,83 @@
+class wymierna:
+    def __init__(self, licznik: int = 0, mianownik: int = 1):
+        self.licznik = licznik
+        self.mianownik = mianownik
+
+    def get_licznik(self):
+        return self.licznik
+
+    def get_mianownik(self):
+        return self.mianownik
+
+    def __repr__(self):
+        return f'{self.licznik}/{self.mianownik}'
+
+    def __float__(self):
+        return float(self.licznik / self.mianownik)
+
+    def __add__(self, other):
+        return wymierna((self.licznik / self.mianownik) + (other.licznik / other.mianownik))
+
+    def __sub__(self, other):
+        return wymierna((self.licznik / self.mianownik) - (other.licznik / other.mianownik))
+
+    def __eq__(self, other):
+        l1 = wymierna(self.licznik / self.mianownik)
+        l2 = wymierna(other.licznik / other.mianownik)
+        if isinstance(other, wymierna):
+            if not l1 < l2 and not l1 > l2:
+                return l1 == l2
+        return False
+
+    def __ne__(self, other):
+        if isinstance(other, wymierna):
+            return self.licznik / self.mianownik != other.licznik / other.mianownik
+        return False
+
+    def __lt__(self, other):
+        if isinstance(other, wymierna):
+            return self.licznik / self.mianownik < other.licznik / other.mianownik
+        return False
+
+    def __le__(self, other):
+        if isinstance(other, wymierna):
+            return self.licznik / self.mianownik <= other.licznik / other.mianownik
+        return False
+
+    def __gt__(self, other):
+        if isinstance(other, wymierna):
+            return self.licznik / self.mianownik > other.licznik / other.mianownik
+        return False
+
+    def __ge__(self, other):
+        if isinstance(other, wymierna):
+            return self.licznik / self.mianownik >= other.licznik / other.mianownik
+
+    def __mul__(self, other):
+        return wymierna((self.licznik / self.mianownik) * (other.licznik / other.mianownik))
+
+    def __div__(self, other):
+        return wymierna((self.licznik / self.mianownik) / (other.licznik / other.mianownik))
+
+
+def main():
+    x = wymierna(4, 3)
+    y = wymierna(5, 8)
+    print(f'Licznik: {x.get_licznik()}')
+    print(f'Mianownik: {x.get_mianownik()}')
+    print(f'Ulamek : {x.__repr__()}')
+    print(f'Float: {x.__float__()}')
+    print(f'Wynik dodawania: {x.__add__(y)}')
+    print(f'Wynik odejmowania: {x.__sub__(y)}')
+    print(f'Czy rowne: {x.__eq__(y)}')
+    print(f'Czy rozne: {x.__ne__(y)}')
+    print(f'Czy mniejsze: {x.__lt__(y)}')
+    print(f'Czy mniejsze lub rowne: {x.__le__(y)}')
+    print(f'Czy wieksze: {x.__gt__(y)}')
+    print(f'Czy wieksze lub rowne: {x.__ge__(y)}')
+    print(f'Wynik mnozenia: {x.__mul__(y)}')
+    print(f'Wynik dzielenia {x.__div__(y)}')
+
+
+if __name__ == "__main__":
+    main()
