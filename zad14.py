@@ -7,6 +7,6 @@ class Circle:
     def obwod(self):
         print(2*math.pi*self.r)
 
-circle = Circle(5)
+circle = Circle(6)
 circle.pole()
 circle.obwod()
