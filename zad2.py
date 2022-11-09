@@ -7,3 +7,7 @@ class Zad2:
 
 for name in Zad2.__dict__:
     print(name)
+
+print("\nZad3\n")
+imie = Zad2('Piotr')
+print(imie.__dict__)
