@@ -9,4 +9,3 @@ class Test:
 napis1 = Test()
 napis1.get_string()
 napis1.print_string()
-
